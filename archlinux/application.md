@@ -77,7 +77,7 @@ ref: https://superuser.com/questions/460739/how-to-listen-to-microphone-output-o
 ```bash
 sudo vi /usr/share/applications/netease-cloud-music.desktop
 
---force-device-scale-factor=2.0
+Exec=netease-cloud-music %U --force-device-scale-factor=2.0
 
 ```
 
