@@ -81,3 +81,32 @@ Exec=netease-cloud-music %U --force-device-scale-factor=2.0
 
 ```
 
+#### vmware
+
+##### Install
+
+```
+ZF3R0-FHED2-M80TY-8QYGC-NPKYF
+```
+
+
+
+```bash
+sudo pacman -S linux-headers
+sudo pacman -S vmware-workstation-macos 
+
+sudo modprobe -a vmw_vmci vmmon
+sudo systemctl start vmware-networks.service
+sudo systemctl start vmware-usbarbitrator.service
+```
+
+
+
+##### Clone
+
+```
+/run/media/mike/本地磁盘/Develop/Environment/Machines/CentOS-7-2
+```
+
+
+

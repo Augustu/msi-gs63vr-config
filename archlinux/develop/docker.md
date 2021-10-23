@@ -1,5 +1,20 @@
 ### docker
 
+#### Install
+
+```bash
+sudo vim /etc/docker/daemon.json
+{
+	"registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]
+}
+
+sudo systemctl restart docker
+
+sudo usermod -a -G users $USER
+```
+
+
+
 #### proxy
 
 ```bash
@@ -10,8 +25,6 @@ sudo vi /etc/systemd/system/docker.service.d/http-proxy.conf
 Environment="HTTP_PROXY=http://127.0.0.1:1080"
 Environment="HTTPS_PROXY=http://127.0.0.1:1080"
 Environment="NO_PROXY=localhost,127.0.0.1,docker.mirrors.ustc.edu.cn"
-#[Service]
-#Environment="HTTP_PROXY=http://127.0.0.1:1080" #"HTTPS_PROXY=http://127.0.0.1:1080" #"NO_PROXY=localhost,127.0.0.1,docker.mirrors.ustc.edu.cn"
 ```
 
 #### mysql
